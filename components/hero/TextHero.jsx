@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 import { TextAnimate } from "../magicui/text-animate";
 
 export function TextHero() {
@@ -18,12 +20,16 @@ export function TextHero() {
           animation="blurIn"
           by="word"
           duration={5}
-          className="text-white w-1/2 text-center m-auto leading-8"
+          className="text-white w-1/2 text-center m-auto leading-8 "
         >
           ۱۰ سال روزی ۱۰ ساعت با گرافیک زندگی کردم و اینجام تا مسیر موفقیت رو
           برات راحت‌تر کنم. فقط کافیه همراهم بشی و قول بدی برای آیندت حاضری تلاش
           کنی ✌
         </TextAnimate>
+
+        <Link href="/course" dir="ltr" className="flex items-center justify-center mt-4">
+          <InteractiveHoverButton >دیدن دوره ها</InteractiveHoverButton>;
+        </Link>
       </div>
     </section>
   );
