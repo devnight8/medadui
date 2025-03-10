@@ -10,7 +10,6 @@ export function Login() {
   const [showAlert, setShowAlert] = useState(false)
   function showModalSearch() {
     setShowAlert(prevShowAlert => !prevShowAlert);
-
   }
   return (
     <div className="flex items-center justify-center gap-4">

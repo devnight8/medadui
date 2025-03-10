@@ -13,7 +13,7 @@ function Navbar() {
     { id: 6, title: "درباره ما", href: "#" },
   ];
   return (
-    <nav className="bg-gray-100 py-3 px-4 rounded-md hidden md:block">
+    <nav className="bg-gray-100 py-3 px-4 rounded-md hidden lg:block">
       <ul>
         <li className="flex items-center justify-between gap-8">
           {navItems.map((item) => {
