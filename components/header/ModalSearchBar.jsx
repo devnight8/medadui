@@ -1,7 +1,7 @@
 
 function ModalSearchBar() {
     return (
-        <div className="md:w-1/3  p-2 rounded shadow absolute top-30 left-0 right-0 m-auto z-30 ">
+        <div className="md:w-1/3  p-2 rounded  absolute top-30 left-0 right-0 m-auto z-30 ">
             <form className="flex items-center max-w-sm mx-auto w-full bg-white p-2 rounded-2xl">
                 <label htmlFor="simple-search" className="sr-only"></label>
                 <div className="relative w-full">
