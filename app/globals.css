@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
@@ -9,10 +8,12 @@
 }
 
 body {
-
   font-family: peyda;
 }
-
+::selection {
+  background: oklch(0.546 0.245 262.881);
+  color: white;
+}
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
