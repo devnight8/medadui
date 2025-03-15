@@ -1,13 +1,25 @@
 "use client"
 
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
+import toast, { Toaster } from 'react-hot-toast'
 
 function register() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const router = useRouter()
     const submitHandler = (e) => {
         e.preventDefault();
+        if (email && password) {
+            toast.success(' ثبت نام با موفقیت انجام شد');
+        } else {
+            toast.error('لطفا تمامی فیلدها را پر کنید');
+            return;
+        }
+        setTimeout(() => {
+            router.push('/')
+        }, 3000);
         console.log(email, password)
     }
     return (
@@ -43,6 +55,7 @@ function register() {
                     </div>
 
                     <button type="submit" onClick={submitHandler} className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">ثبت نام </button>
+                    <Toaster />
                     <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
                         قبلا ثبت نام نکردی ؟ <Link href="/login" className="text-blue-700 hover:underline dark:text-blue-500">  ورود به سایت</Link>
                     </div>
