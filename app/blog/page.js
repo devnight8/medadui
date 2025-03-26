@@ -5,6 +5,11 @@ function page() {
   return (
     <div>
       <CardBlog />
+      <CardBlog />
+      <CardBlog />
+      <CardBlog />
+      <CardBlog />
+      <CardBlog />
     </div>
   );
 }
